@@ -4,27 +4,49 @@
 {% block conteudo %}
 <form method="post">
     {% csrf_token %}
-    <div class="form-group">
-        {{ form_usuario.username.errors }}
-        <label>Usuário:</label>
-        {{form_usuario.username|addclass:'form-control'}}
-    </div>
+    <div class="arrow">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Cadastrar</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            {{ form_usuario.username.errors }}
+                            <label><b>Usuário:</b></label>
+                            {{form_usuario.username|addclass:'form-control'}}
 
-    <div class="form-group">
-        {{ form_usuario.password1.errors }}
-        <label>Senha:</label>
-        {{form_usuario.password1|addclass:'form-control'}}
-    </div>
+                        </div>
 
-    <div class="form-group">
-        {{ form_usuario.password2.errors }}
-        <label>Confirmação de Senha:</label>
-        {{form_usuario.password2|addclass:'form-control'}}
-    </div>
+                        <div class="form-label-group">
+                            {{ form_usuario.password1.errors }}
+                            <label><b>Senha:</b></label>
+                            {{form_usuario.password1|addclass:'form-control'}}
 
-    <div class="form-group">
-        <input type="submit" value="Cadastrar" class="btn btn-primary">
-        <a href="{% url 'cadastrar_tarefa' %}" class="text-primary">Já Tenho Cadastro</a>
+                        </div><br>
+
+                        <div class="form-label-group">
+                            {{ form_usuario.password2.errors }}
+                            <label><b>Confirmação de Senha:</b></label>
+                            {{form_usuario.password2|addclass:'form-control'}}
+                        </div><br>
+                        <div class="form-group">
+                            <input type="submit" value="Cadastrar" class="btn btn-primary">
+                            <a href="{% url 'cadastrar_tarefa' %}" class="text-primary">Já Tenho Cadastro</a>
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 </form>
+
+
+
+
 {% endblock conteudo %}
