@@ -10,6 +10,7 @@
     <div class="card-body">
         <h5 class="card-title"><b>Titulo: </b>{{tarefa.titulo}}</h5>
         <p class="card-text"><b>Descrição: </b>{{tarefa.descricao}}</p>
+        <p class="card-text"><b>Data: </b>{{tarefa.data_expiracao}}</p>
         <hr>
         <a href="{% url 'editar_tarefa' tarefa.id %}" class="text-primary">Editar Tarefa</a>
         <a href="{% url 'remover_tarefa' tarefa.id %}" class="text-danger">Remover Tarefa</a>

@@ -14,39 +14,28 @@
                             {{ form_usuario.username.errors }}
                             <label><b>Usuário:</b></label>
                             {{form_usuario.username|addclass:'form-control'}}
-
                         </div>
-
                         <div class="form-label-group">
                             {{ form_usuario.password1.errors }}
                             <label><b>Senha:</b></label>
                             {{form_usuario.password1|addclass:'form-control'}}
-
-                        </div><br>
-
+                        </div>
+                        <br>
                         <div class="form-label-group">
                             {{ form_usuario.password2.errors }}
                             <label><b>Confirmação de Senha:</b></label>
                             {{form_usuario.password2|addclass:'form-control'}}
-                        </div><br>
+                        </div>
+                        <br>
                         <div class="form-group">
                             <input type="submit" value="Cadastrar" class="btn btn-primary">
                             <a href="{% url 'cadastrar_tarefa' %}" class="text-primary">Já Tenho Cadastro</a>
                         </div>
-
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </form>
-
-
-
 
 {% endblock conteudo %}
